@@ -3,9 +3,8 @@ import { Injectable } from "@angular/core";
 import { Item } from "../assets/model/item.schema";
 
 import { ElectronService } from "ngx-electron";
-import { Observable } from "rxjs/observable";
-import { of } from "rxjs/observable/of";
 import { catchError } from "rxjs/operators";
+import { of, Observable } from "rxjs";
 
 @Injectable()
 export class AppService {

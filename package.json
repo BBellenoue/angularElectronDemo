@@ -47,28 +47,29 @@
     }
   },
   "dependencies": {
-    "@angular/common": "^2.4.10",
-    "@angular/compiler": "^2.4.10",
-    "@angular/core": "^2.4.10",
-    "@angular/platform-browser": "^2.4.10",
-    "@angular/platform-browser-dynamic": "^2.4.10",
+    "@angular/cli": "^9.0.6",
+    "@angular/common": "^9.0.6",
+    "@angular/compiler": "^9.0.6",
+    "@angular/core": "^9.0.6",
+    "@angular/platform-browser": "^9.0.6",
+    "@angular/platform-browser-dynamic": "^9.0.6",
     "electron-compile": "^6.4.4",
     "electron-devtools-installer": "^2.2.4",
     "electron-squirrel-startup": "^1.0.0",
     "ngx-electron": "^2.2.0",
     "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.4",
     "sqlite3": "^4.1.1",
     "tslib": "^1.11.1",
     "typeorm": "^0.2.24",
-    "zone.js": "^0.7.8"
+    "zone.js": "^0.10.3"
   },
   "devDependencies": {
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
     "electron-forge": "^5.2.4",
     "electron-prebuilt-compile": "4.0.0",
     "tslint": "^4.5.1",
-    "typescript": "^2.1.6"
+    "typescript": "^2.9.2"
   }
 }
