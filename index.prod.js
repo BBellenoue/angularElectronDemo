@@ -53,7 +53,7 @@ var createWindow = function () { return __awaiter(void 0, void 0, void 0, functi
                     synchronize: true,
                     logging: true,
                     logger: "simple-console",
-                    database: "./src/assets/data/database.sqlite",
+                    database: "./database.sqlite",
                     entities: [item_schema_1.Item]
                 })];
             case 1:
@@ -68,8 +68,8 @@ var createWindow = function () { return __awaiter(void 0, void 0, void 0, functi
                     }
                 });
                 // and load the index.html of the app.
-                mainWindow.loadFile("dist/angularElectronDemo/index.html");
                 // mainWindow.loadURL("http://localhost:4200");
+                mainWindow.loadFile("dist/angularElectronDemo/index.html");
                 // Open the DevTools.
                 if (isDevMode) {
                     mainWindow.webContents.openDevTools();

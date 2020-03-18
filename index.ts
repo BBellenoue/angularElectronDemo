@@ -18,7 +18,7 @@ const createWindow = async () => {
     synchronize: true,
     logging: true,
     logger: "simple-console",
-    database: "./src/assets/data/database.sqlite",
+    database: "./database.sqlite",
     entities: [Item]
   });
 

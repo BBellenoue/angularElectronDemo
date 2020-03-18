@@ -18,7 +18,7 @@ const createWindow = async () => {
     synchronize: true,
     logging: true,
     logger: "simple-console",
-    database: "./src/assets/data/database.sqlite",
+    database: "./database.sqlite",
     entities: [Item]
   });
 
@@ -34,8 +34,8 @@ const createWindow = async () => {
   });
 
   // and load the index.html of the app.
-  mainWindow.loadFile("dist/angularElectronDemo/index.html");
   // mainWindow.loadURL("http://localhost:4200");
+  mainWindow.loadFile("dist/angularElectronDemo/index.html");
 
   // Open the DevTools.
   if (isDevMode) {

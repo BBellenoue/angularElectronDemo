@@ -1,7 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 dist
 node_modules
-src/assets/data
+database.sqlite
 src/assets/model/*.js*
 
 .idea
