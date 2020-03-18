@@ -13,16 +13,18 @@
   "scripts": {
     "ng": "ng serve",
     "clean": "rimraf dist",
-    "electron": "wait-on http://localhost:4200 && electron .",
+    "electron": "wait-on http://localhost:4200 && electron electron-app.js",
     "prestart": "npm run clean",
-    "start": "concurrently -k \"ng serve\" \"npm run electron\"",
+    "start": "concurrently -k \"npm run compile-ts\" \"ng serve\" \"npm run electron\"",
     "prebuild": "npm run clean",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "prerelease": "npm run build -- --prod",
-    "release": "electron-builder"
+    "release": "electron-builder",
+    "rebuild": "electron-rebuild -f -w sqlite3",
+    "compile-ts": "tsc electron-app.ts"
   },
   "private": true,
   "dependencies": {
@@ -34,8 +36,11 @@
     "@angular/platform-browser": "~9.0.0",
     "@angular/platform-browser-dynamic": "~9.0.0",
     "@angular/router": "~9.0.0",
+    "ngx-electron": "^2.2.0",
     "rxjs": "~6.5.4",
+    "sqlite3": "^4.1.1",
     "tslib": "^1.10.0",
+    "typeorm": "^0.2.24",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
@@ -50,6 +55,7 @@
     "concurrently": "^5.1.0",
     "electron": "^8.1.1",
     "electron-builder": "^22.4.1",
+    "electron-rebuild": "^1.10.1",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.3.0",
