@@ -23,7 +23,8 @@
     "e2e": "ng e2e",
     "prerelease": "npm run compile-ts && npm run build -- --prod",
     "release": "electron-builder",
-    "compile-ts": "tsc index.ts && tsc index.prod.ts"
+    "compile-ts": "tsc --build tsconfig.electron.json",
+    "rebuild": "electron-rebuild -f -w sqlite3"
   },
   "private": true,
   "dependencies": {
@@ -35,8 +36,12 @@
     "@angular/platform-browser": "~9.0.0",
     "@angular/platform-browser-dynamic": "~9.0.0",
     "@angular/router": "~9.0.0",
+    "ngx-electron": "^2.2.0",
+    "reflect-metadata": "^0.1.13",
     "rxjs": "~6.5.4",
+    "sqlite3": "^4.1.1",
     "tslib": "^1.10.0",
+    "typeorm": "^0.2.24",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
@@ -51,6 +56,7 @@
     "concurrently": "^5.1.0",
     "electron": "^8.1.1",
     "electron-builder": "^22.4.1",
+    "electron-rebuild": "^1.10.1",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.3.0",

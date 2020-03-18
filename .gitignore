@@ -1,8 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 dist
 node_modules
+src/assets/data
+src/assets/model/*.js*
 
 .idea
-
-index.js
-index.prod.js
