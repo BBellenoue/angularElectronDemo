@@ -30,7 +30,8 @@
               {
                 "input": "index.js",
                 "inject": false
-              }]
+              }
+            ]
           },
           "configurations": {
             "production": {
@@ -127,6 +128,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angularElectronDemo"
+    }
+  },
+  "defaultProject": "angularElectronDemo",
+  "cli": {
+    "analytics": false
+  }
 }

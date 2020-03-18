@@ -14,15 +14,16 @@
     "ng": "ng serve",
     "clean": "rimraf dist",
     "electron": "wait-on http://localhost:4200 && electron .",
-    "prestart": "npm run clean",
+    "prestart": "npm run clean && npm run compile-ts",
     "start": "concurrently -k \"ng serve\" \"npm run electron\"",
     "prebuild": "npm run clean",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "prerelease": "npm run build -- --prod",
-    "release": "electron-builder"
+    "prerelease": "npm run compile-ts && npm run build -- --prod",
+    "release": "electron-builder",
+    "compile-ts": "tsc index.ts && tsc index.prod.ts"
   },
   "private": true,
   "dependencies": {
