@@ -1,0 +1,4 @@
+<div class="field" *ngIf="field">
+  <div class="label">{{ field.label }}</div>
+  <input [(ngModel)]="field.value" (keyup)="dispatchField()" />
+</div>
