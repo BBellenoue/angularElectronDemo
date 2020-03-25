@@ -1,13 +1,1 @@
-<div style="text-align:center">
-  <h1>Welcome to {{ title }}!</h1>
-  <button (click)="addItem()" mat-raised-button>Add Item</button>
-  <button (click)="deleteItem()" mat-raised-button>Delete Item</button>
-  <h2>Here is the contents of the database:</h2>
-  <div>
-    <ul style="list-style: none">
-      <li *ngFor="let item of itemList">
-        {{ item.name }}
-      </li>
-    </ul>
-  </div>
-</div>
+<router-outlet></router-outlet>

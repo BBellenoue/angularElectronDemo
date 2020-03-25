@@ -1,13 +1,14 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
-import { NgxElectronModule, ElectronService } from "ngx-electron";
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NgxElectronModule, ElectronService } from 'ngx-electron';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, NgxElectronModule],
+  imports: [BrowserModule, AppRoutingModule, NgxElectronModule, RouterModule],
   providers: [ElectronService],
   bootstrap: [AppComponent]
 })
